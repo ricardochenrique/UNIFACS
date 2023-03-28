@@ -1,0 +1,27 @@
+import java.util.Scanner; 
+public class Númerosperfeitos {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in); 
+
+		System.out.println(" Digite um número: ");
+		int numero = sc.nextInt();
+		int somaDivisores = 0;
+		for ( int i = 1; i < numero; i++) {
+			if ( numero % i == 0 ) {
+				somaDivisores = somaDivisores + i;
+				// somaDivisores = somaDivisores + i == somaDivisores += i
+			}
+		}
+
+		if ( somaDivisores == numero) {
+			System.out.println("O número " + numero + " é perfeito!");
+
+		}
+		else {
+			System.out.println("O número " + numero + " não é perfeito!");
+
+		}
+	}
+
+}
