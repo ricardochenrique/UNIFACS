@@ -1,0 +1,36 @@
+package aplicacao;
+import java.util.Scanner;
+public class Vetores {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		float[]notas = new float [10];
+
+		float []vet = new float [10]; //CRIANDO VETOR
+		float maiorNota = 0, menorNota = 10, soma = 0, media;
+		for ( int i = 0; i < 10; i++) {
+			System.out.println(" Informe a nota do aluno " + (i + 1) + ": ");
+			notas[i] = sc.nextFloat();
+
+			if (notas[i] > maiorNota) {
+				maiorNota = notas[i];
+			}
+			if (notas[i] < menorNota) {
+				menorNota = notas[i];
+			}
+
+			soma += notas[i];
+		}
+		media = soma / 10;
+
+
+		System.out.println(" A maior nota é = " + maiorNota);
+		System.out.println(" A menor nota é = " + menorNota);
+		System.out.println(" A media é = " + media);
+
+		sc.close();
+	}
+}
+
+
