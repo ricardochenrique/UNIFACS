@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Numerosamigos {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println(" Digite um número: ");
+		int n1 = sc.nextInt();
+		System.out.println(" Digite outro número: ");
+		int n2 = sc.nextInt();
+
+		int soma1 = somaDivisores(n1);
+		int soma2 = somaDivisores(n2);
+		if ((soma1 == n2) && (soma2 == n1)) {
+			System.out.println("São amigos");
+		}
+		else {
+			System.out.println(" Não são amigos");
+		}
+	}
+
+	public static int somaDivisores(int n) {
+		int soma = 0;
+		for ( int i = 1; i < n; i++) {
+			if ( n % 1 == 0 ) {
+				soma = soma + i;
+
+			}
+
+		}
+		return soma;
+
+	}
+}
