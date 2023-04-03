@@ -1,0 +1,60 @@
+package aplicacao;
+import java.util.Scanner;
+public class NumerosdeEstudantes {
+
+	public static void main(String[] args) {
+
+		// DECLARAÇÃO DE VARIÁVEIS
+
+		int n, soma;
+		float[] notas;
+		Scanner entrada = new Scanner(System.in);
+
+		// solicita e valida o número de alunos (n>0)
+
+		do {
+			System.out.println("Infome o número de alunos: ");
+			n = entrada.nextInt();
+		} while ( n <= 0);
+
+
+		// Instancie o array para armazenar as notas dos alunos
+
+		notas = new float[n];
+
+		System.out.println("Um array capaz de armazenar a nota de " + n + " alunos foi criada!");
+
+
+		// solicita e valida as notas (nota>=0)
+		for (int i = 0; i < n; i++) {
+
+			do {
+				System.out.println("Informe a nota do " + ( i + 1 ) + " aluno! ");
+				notas[i] = entrada.nextFloat();
+			} while ( notas [i] < 0 || notas [i] > 10);
+
+		}
+		float maior=notas[0];
+		float menor=notas[0];
+
+		for (int i = 1; i <n; i++) {
+			if (notas [i]<menor)
+				menor=notas[i];
+
+			if (notas[i]>maior)
+				maior=notas[i];
+
+		}
+		System.out.println(" Menor nota = " + menor);
+		System.out.println(" Maior nota = " + maior);
+
+		float somaDasNotas = 0;
+		for (int i=0; i<n; i++) {
+			somaDasNotas+=notas[i];
+		}
+		float media=somaDasNotas/notas.length;
+		System.out.println(" Media=" +media);
+	}
+}
+
+
