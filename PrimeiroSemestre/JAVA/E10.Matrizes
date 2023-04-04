@@ -1,0 +1,40 @@
+package aplicacao;
+import java.util.Scanner;
+public class Matrizes {
+
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int mat [][] = new int [4][3];
+		int lin, col;
+
+		for (lin=0; lin <mat.length; lin++)
+			for (col=0; col<mat[0].length; col++)
+			{
+				System.out.println("Informe o número da linha " + lin + " e coluna " + col);
+				mat[lin][col] = sc.nextInt();
+
+			}
+		for (lin=0; lin <mat.length; lin++) {
+			for (col=0; col<mat[0].length; col++)
+			{
+				if (mat[lin] [col] % 2 == 0) {
+					mat [lin] [col] = 0;
+				}
+				else {
+					mat [lin][col]=1;
+				}
+			}
+		}
+		for (lin=0; lin <mat.length; lin++) {
+			for (col=0; col<mat[0].length; col++) {
+				System.out.print(mat [lin] [col] + " ");
+			}
+			System.out.println();
+		}
+
+	}
+
+}
+
+
