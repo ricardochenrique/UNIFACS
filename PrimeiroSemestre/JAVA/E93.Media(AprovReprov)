@@ -1,0 +1,26 @@
+package aplicacao;
+import java.util.Scanner;
+public class IfElse {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		float num1, num2, media;
+		
+		System.out.println(" Informe a primeira nota: ");
+		num1 = sc.nextFloat();
+		
+		System.out.println("Informe a segunda nota: ");
+		num2 = sc.nextFloat();
+		
+		media = (num1 + num2)/2;
+		
+		if (media >=7) 
+		System.out.print("Parabéns! Você está aprovado!");
+		else
+			System.out.print("Infelizmente você está reprovado!");
+			
+			
+
+	}
+
+}
