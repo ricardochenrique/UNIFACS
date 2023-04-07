@@ -1,0 +1,41 @@
+package aplicacao;
+import java.util.Scanner;
+public class SemanaSwitch {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int x;
+
+		System.out.println("Infome um número de 1 a 7");
+		x = sc.nextInt();
+
+		switch(x){
+
+		case 1: System.out.print("Domingo");
+		break;
+
+		case 2: System.out.print("Segunda");
+		break;
+
+		case 3: System.out.print("Terça");
+		break;
+
+		case 4: System.out.print("Quarta");
+		break;
+
+		case 5: System.out.print("Quinta");
+		break;
+
+		case 6: System.out.print("Sexta");
+		break;		
+
+		case 7: System.out.print("Sábado");
+		break;
+
+		default:
+			System.out.println(" Número Inválido");
+		}
+
+	}
+
+}
