@@ -20,8 +20,8 @@ public class Triangulo {
 				System.out.println("O triângulo é Equilátero!");
 			else if ((a==b) && (a!=c) && (c!=b))
 				System.out.println(" O triângulo é Isósceles!");
-			else ((a!=b) && (b!=c) && (c!=a))
-			System.out.println(" O triângulo é Escaleno!");	
+			else if ((a!=b) && (b!=c) && (c!=a))
+				System.out.println(" O triângulo é Escaleno!");	
 		}
 		else 
 			System.out.print("Os números não formam um triângulo!");
