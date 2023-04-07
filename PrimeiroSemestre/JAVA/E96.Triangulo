@@ -1,0 +1,29 @@
+package aplicacao;
+import java.util.Scanner;
+public class Triangulo {
+	public static void main (String[]args) {
+		Scanner sc = new Scanner(System.in);
+		int a , b , c;
+
+		System.out.println("Informe o primeiro lado do triângulo: ");
+		a = sc.nextInt();
+
+		System.out.println("Informe o segundo lado do triângulo: ");
+		b = sc.nextInt();
+
+		System.out.println("Informe o terceiro lado do triângulo: ");
+		c = sc.nextInt();
+
+		if ((a<b+c) && (b<a+c) && (c<a+b)) {
+
+			if ((a==b) && (a==c) && (b==c))
+				System.out.println("O triângulo é Equilátero!");
+			else if ((a==b) && (a!=c) && (c!=b))
+				System.out.println(" O triângulo é Isósceles!");
+			else ((a!=b) && (b!=c) && (c!=a))
+			System.out.println(" O triângulo é Escaleno!");	
+		}
+		else 
+			System.out.print("Os números não formam um triângulo!");
+	}
+}
