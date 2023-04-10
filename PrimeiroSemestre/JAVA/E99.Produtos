@@ -1,0 +1,40 @@
+package aplicacao;
+import java.util.Scanner;
+public class produto {
+	public static void main (String[]args) {
+		Scanner sc = new Scanner(System.in);
+		int num;
+
+		System.out.println("Informe o código do produto: ");
+		num = sc.nextInt();
+
+		switch (num) {
+
+		case 1:
+			System.out.println(" Alimento não perecível!");
+			break;
+
+		case 2:
+			System.out.println(" Alimento perecível!");
+			break;
+
+		case 3:
+			System.out.println(" Vestuário!");
+			break;
+
+		case 4:
+			System.out.println(" Higiene Pessoal!");
+			break;
+
+		case 5:
+			System.out.println(" Limpeza!");
+			break;
+
+		default:
+			System.out.println(" Código Inválido!");
+			break;
+		}
+	}
+
+
+}
