@@ -1,0 +1,18 @@
+package aplicacao;
+import java.util.Scanner;
+public class Multipliquepor2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int num , por2, contador;
+
+		for (contador = 1; contador<6; contador++) {
+			System.out.println("Informe o número: ");
+			num = sc.nextInt();
+			por2 = num * 2;
+			System.out.println(por2);
+		}
+		System.out.println("FIM!");
+	}
+
+}
